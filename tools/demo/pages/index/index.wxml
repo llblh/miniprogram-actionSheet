@@ -1,0 +1,9 @@
+<view class="home">
+  <button class="btn" bindtap="actionSheetToggle">click me</button>
+</view>
+<actionsheet
+  status="{{ asStatus }}"
+  actionList="{{ actionList }}"
+  bindclose="actionSheetToggle"
+  bindaction="actionSheetReceive"
+/>

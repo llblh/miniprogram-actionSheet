@@ -1,0 +1,86 @@
+button {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  line-height: 1;
+  background-color: transparent;
+  overflow: inherit;
+}
+button::after {
+  display: none;
+}
+.actionsheet-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.actionsheet {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e9e9e9;
+  backface-visibility: hidden;
+  transform: translate(0, 150%);
+  transition: all .3s;
+  z-index: 4000;
+}
+.actionsheet-mask{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  animation: fadeOut .05s ease both
+}
+.actionsheet-toggle .actionsheet {
+  transform: translate(0, 0);
+}
+.actionsheet-toggle .actionsheet-mask {
+  animation: fadeIn .3s ease both
+}
+.actionsheet_menu {
+  background-color: #fff;
+}
+.actionsheet_action {
+  margin-top: 8rpx;
+  background-color: #fff;
+}
+.actionsheet_cell {
+  position: relative;
+  padding: 30rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 1;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+.actionsheet_action .actionsheet_cell {
+  border-bottom: 0;
+}
+
+.actionsheet_cell:active {
+  opacity: .8;
+}
+@keyframes fadeIn {
+  0% {
+    z-index: 4000;
+    opacity: 0
+  }
+  100% {
+    z-index: 4000;
+    opacity: 1
+  }
+}
+@keyframes fadeOut {
+  0% {
+    z-index: 4000;
+    opacity: 1
+  }
+  100% {
+    z-index: -1;
+    opacity: 0
+  }
+}

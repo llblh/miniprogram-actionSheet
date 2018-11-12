@@ -1,0 +1,28 @@
+<view class="{{ status && 'actionsheet-box actionsheet-toggle' }}">
+  <view class="actionsheet-mask" bindtap="onClose"></view>
+  <view class="actionsheet">
+    <view class="actionsheet_menu">
+      <block wx:for="{{actionList}}" wx:key="index">
+        <button wx:if="{{item.key === 'share'}}"
+          class="actionsheet_cell"
+          hover-class="none"
+          open-type="share"
+          data-item="{{ item }}"
+          bindtap="actionLaunch"
+        >{{item.name}}</button>
+        <view wx:else
+          class="actionsheet_cell"
+          bindtap="actionLaunch"
+          data-item="{{ item }}"
+          style="color: {{ item.color }}"
+        >{{item.name}}</view>
+      </block>
+    </view>
+    <view class="actionsheet_action">
+      <view
+        class="actionsheet_cell"
+        bindtap="onClose"
+      >取消</view>
+    </view>
+  </view>
+</view>
