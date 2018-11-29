@@ -1,3 +1,6 @@
+page {
+  height: 200%;
+}
 .home {
   padding: 100rpx;
 }
