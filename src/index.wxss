@@ -64,6 +64,7 @@ button::after {
 
 .actionsheet_cell:active {
   opacity: .8;
+  background-color: #f9f9f9;
 }
 @keyframes fadeIn {
   0% {

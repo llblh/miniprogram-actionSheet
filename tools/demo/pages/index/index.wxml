@@ -1,5 +1,6 @@
 <view class="home">
   <button class="btn" bindtap="actionSheetToggle">click me</button>
+  <button class="btn" bindtap="actionSheetSlotToggle">custom click me</button>
 </view>
 <actionsheet
   status="{{ asStatus }}"
@@ -7,3 +8,13 @@
   bindclose="actionSheetToggle"
   bindaction="actionSheetReceive"
 />
+<actionsheetslot
+  status="{{ asStatusSlot }}"
+  bindclose="actionSheetSlotToggle"
+>
+  <view class="iten-container">
+    <view class="item">分享好友</view>
+    <view class="item">编辑</view>
+    <view class="item">删除</view>
+  </view>
+</actionsheetslot>

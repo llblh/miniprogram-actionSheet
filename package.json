@@ -1,6 +1,6 @@
 {
   "name": "@carpenter/miniprogram-actionsheet",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "miniprogram actionSheet",
   "main": "miniprogram_dist/index.js",
   "scripts": {

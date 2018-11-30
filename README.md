@@ -29,15 +29,25 @@ npm install --save @carpenter/miniprogram-actionsheet
     bindclose="actionSheetToggle"
     bindaction="actionSheetReceive"
   />
+  <!-- <actionsheet
+    status="{{ asStatus }}"
+    bindclose="actionSheetToggle"
+  >
+    <view class="iten-container">
+      <view class="item">分享好友</view>
+      <view class="item">编辑</view>
+      <view class="item">删除</view>
+    </view>
+  </actionsheet> -->
 ```
 #### miniprogram-actionsheet 参数
 
 | 属性名        | 类型          | 默认值        | 是否必须      | 说明                     |
 |--------------|--------------|--------------|--------------|-------------------------|
 | status       | Boolean      | false        | 是 | 是否显示 |
-| actionList   | Array        | []           | 是           | 菜单内容                  |
+| actionList   | Array        | []           | 否           | 菜单内容                  |
 | close        | Function     |              | 是           | triggerEvent             |
-| action       | Function     |              | 是           | triggerEvent             |
+| action       | Function     |              | 否           | triggerEvent             |
 
 
 #### actionList
@@ -92,3 +102,7 @@ Page({
   }
 })
 ```
+
+#### slot
+
+自定义 actionList 部分

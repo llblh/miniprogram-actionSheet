@@ -17,6 +17,7 @@ Page({
         color: 'red'
       }
     ],
+    asStatusSlot: false,
   },
   actionSheetToggle() {
     this.setData({
@@ -39,5 +40,10 @@ Page({
         break
     }
     this.actionSheetToggle()
+  },
+  actionSheetSlotToggle() {
+    this.setData({
+      asStatusSlot: !this.data.asStatusSlot,
+    })
   }
 })

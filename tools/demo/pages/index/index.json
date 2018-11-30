@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "actionsheet": "../../components/index"
+    "actionsheet": "../../components/index",
+    "actionsheetslot": "../../components/index"
   }
 }
